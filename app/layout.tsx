@@ -1,10 +1,20 @@
+"use client"
 import Header from '@/components/header'
 import './globals.css'
+import { WagmiConfig, createClient } from "wagmi";
+import { ConnectKitProvider, getDefaultClient } from "connectkit";
 
-export const metadata = {
-  title: 'Zypto Finance',
-  description: 'A community of Angel Investors',
-}
+const alchemyId = process.env.ALCHEMY_ID;
+
+const client = createClient(
+  getDefaultClient({
+    appName: "Zypto Finance",
+    alchemyId,
+  }),
+);
+
+
+
 
 export default function RootLayout({
   children,
@@ -12,11 +22,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className='flex h-full flex-col'>
-        <Header />
-        {children}
-        </body>
-    </html>
+    <WagmiConfig client={client}>
+      <ConnectKitProvider>
+        <html lang="en">
+          <body className='flex h-full flex-col'>
+            <Header />
+            {children}
+          </body>
+        </html>
+      </ConnectKitProvider>
+    </WagmiConfig>
   )
 }
+
