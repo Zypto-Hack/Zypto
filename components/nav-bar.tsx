@@ -31,7 +31,7 @@ export default function NavBar(){
 
 
     return(
-        <nav className="flex gap-4 py-6 px-12">
+        <nav className="hidden lg:flex lg:gap-10 items-center">
             {nav.map(e=> {
                 return (
                     <Link 
