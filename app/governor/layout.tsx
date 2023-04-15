@@ -6,7 +6,7 @@ export default async function Layout({
     return (
         <div>
             <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-                <div className="text-xs font-semibold uppercase">Home {">"} Governor</div>
+                <div className="text-xs font-semibold uppercase">Home   {" > "}   Governor</div>
                 {children}
             </div>
         </div>

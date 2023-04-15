@@ -28,7 +28,7 @@ export default function RootLayout({
       <ConnectKitProvider>
         <ContractProvider>
           <html lang="en">
-            <body className='flex h-full flex-col'>
+            <body className='flex h-full flex-col bg-gray-50'>
               <Header />
               {children}
             </body>

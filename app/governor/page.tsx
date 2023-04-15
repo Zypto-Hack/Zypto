@@ -1,6 +1,6 @@
 export default function Page(){
     return (
-        <div className="flex flex-col ">
+        <div className="flex flex-col">
             <div className="flex justify-between bg-white p-4 ring-1 ring-slate-300 w-full rounded-md mt-6 ">
                 <h2 className="text-2xl font-semibold">Zypto Polygon</h2>
                 <div className="flex gap-4 ">
