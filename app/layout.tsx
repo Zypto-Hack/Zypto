@@ -24,18 +24,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <WagmiConfig client={client}>
-      <ConnectKitProvider>
-        <ContractProvider>
-          <html lang="en">
-            <body className='flex h-full flex-col bg-gray-50'>
-              <Header />
-              {children}
-            </body>
-          </html>
+      <WagmiConfig client={client}>
+        <ConnectKitProvider>
+          <ContractProvider>
+            <html lang="en">
+              <body className='flex h-full flex-col bg-gray-50'>
+                <Header />
+                {children}
+              </body>
+            </html>
           </ContractProvider>
-      </ConnectKitProvider>
-    </WagmiConfig>
+        </ConnectKitProvider>
+      </WagmiConfig>
   )
 }
 
