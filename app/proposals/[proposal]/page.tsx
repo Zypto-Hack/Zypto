@@ -1,4 +1,5 @@
 'use client'
+import DisplayVotes from "@/components/molecules/DisplayVote";
 import { useParams } from "next/navigation"
 
 export default function Page() {
@@ -18,15 +19,14 @@ export default function Page() {
                 <div className="flex flex-col grow gap-8 w-full">
                     <div className="flex bg-white p-4 ring-1 ring-slate-300  rounded-md">
                         <h2 className="text-lg font-semibold">Overview</h2>
+                        <div className="h-96"></div>
                     </div>
                     <div className="flex bg-white p-4 ring-1 ring-slate-300 rounded-md">
                         <h2 className="text-lg font-semibold">Details</h2>
                     </div>
                 </div>
                 <div className="flex flex-col grow-0 w-2/5 gap-8">
-                    <div className="flexbg-white p-4 ring-1 ring-slate-300 rounded-md">
-                        <h2 className="text-lg font-semibold">Votes</h2>
-                    </div>
+                    <DisplayVotes />
                     <div className="flexbg-white p-4 ring-1 ring-slate-300 rounded-md">
                         <h2 className="text-lg font-semibold">Status</h2>
                     </div>
