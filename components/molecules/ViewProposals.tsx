@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const ViewProposals = ({ proposals }: { proposals: any }) => {
+    console.log("001")
     console.log(proposals)
     return (
         <div className="relative rounded-xl overflow-auto">
